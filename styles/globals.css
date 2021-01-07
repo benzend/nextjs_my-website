@@ -13,3 +13,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.white {
+  color: white;
+}
+
+.txt-center {
+  text-align: center;
+}

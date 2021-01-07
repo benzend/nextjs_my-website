@@ -1,8 +1,26 @@
 .header {
+  position: relative;
   height: 90vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.header__circle {
+  background-color: green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 30px;
+  width: 30px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -2;
+}
+
+.header__circle.active {
+  height: 400px;
+  width: 600px;
 }
