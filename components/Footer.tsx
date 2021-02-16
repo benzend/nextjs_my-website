@@ -4,12 +4,11 @@ import {
   Box,
   Container,
   Grid,
-  IconButton,
   Link,
   makeStyles,
   Typography,
 } from "@material-ui/core";
-import { GitHub, LinkedIn, Twitter, Home } from "@material-ui/icons";
+import { GitHub, LinkedIn, Twitter } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
