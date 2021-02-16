@@ -182,7 +182,7 @@ export default function PortfolioProjectsSection({ animate, variants }: Props) {
         >
           <Grid spacing={3} alignItems="center" justify="center" container>
             {projects.map((project) => (
-              <Grid item>
+              <Grid key={project.title} item>
                 <motion.div variants={variants}>
                   <Project
                     key={project.title}
