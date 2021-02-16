@@ -14,46 +14,41 @@ function Circle(props) {
 
   // Rotate mesh every frame, this is outside of React without overhead
   useFrame(() => {
-    if (mesh.current)
+    if (mesh.current) {
       mesh.current.rotation.x = mesh.current.rotation.y += 0.001;
+    }
   });
 
   return (
-    <mesh
-      {...props}
-      ref={mesh}
-      scale={[5, 5, 5]}
-      onClick={() => setActive(!active)}
-      onPointerOver={() => setHover(true)}
-      onPointerOut={() => setHover(false)}
-    >
+    <mesh {...props} ref={mesh} scale={[5, 5, 5]}>
       <sphereBufferGeometry args={[1, 60, 60]} />
       <meshLambertMaterial map={texture1} />
     </mesh>
   );
 }
 
-interface Props {
-  yoffset: number;
+interface BgEarth {
+  animate: number;
 }
 
-export default function BackgroundEarth({ yoffset }: Props) {
+export default function BackgroundEarth({ animate }: BgEarth) {
+  console.log(animate);
   return (
     <Canvas
       style={{
         zIndex: -20,
         position: "fixed",
-        top: (yoffset / 2.4) * -1,
-        height: "250vh",
-        width: "100vw",
-        backgroundColor: "#001",
+        top: 0,
+        // height: "100vh",
+        // width: "100vw",
+        backgroundColor: "#000006",
         transition: "all 3s ease-out",
       }}
     >
-      <pointLight position={[-10, -10, -11]} />
-      <pointLight position={[15, 15, 10]} />
+      <pointLight position={[-10, -10, -10]} />
+      <pointLight position={[15, 20, 0]} />
       <Suspense fallback={null}>
-        <Circle position={[0, -1.3, -6]} />
+        <Circle position={[0, 0, -5]} />
       </Suspense>
     </Canvas>
   );

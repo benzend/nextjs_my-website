@@ -1,5 +1,5 @@
 import { Grid, IconButton, Link, Typography } from "@material-ui/core";
-import { GitHub, LinkedIn, Twitter } from "@material-ui/icons";
+import { GitHub, LinkedIn, Twitter, Home } from "@material-ui/icons";
 
 export default function Footer() {
   return (
@@ -12,7 +12,11 @@ export default function Footer() {
     >
       <Grid item>
         <Typography>
-          <Link href="https://madeunlinked.com">@madeunlinked</Link>
+          <Link href="https://madeunlinked.com/portfolio">
+            <IconButton color="primary">
+              <Home />
+            </IconButton>
+          </Link>
         </Typography>
       </Grid>
       <Grid item>
