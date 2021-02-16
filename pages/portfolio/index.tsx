@@ -91,7 +91,7 @@ export default function Home() {
     },
     yVisibleGrid: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         staggerChildren: 0.3,
       },

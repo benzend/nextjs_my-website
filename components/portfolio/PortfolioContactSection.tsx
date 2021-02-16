@@ -69,9 +69,13 @@ const useStyles = makeStyles((theme) => ({
   },
   otherContactTitle: {
     fontWeight: 300,
+    paddingBottom: "1rem",
   },
   linkIcons: {
     color: theme.palette.secondary.light,
+  },
+  icons: {
+    fontSize: "3rem",
   },
 }));
 
@@ -103,7 +107,7 @@ export default function PortfolioContactSection({ animate, variants }: Props) {
           variants={variants}
           animate={animate ? "visibleByX" : "xRightHidden"}
         >
-          <Grid container>
+          <Grid alignItems="center" justify="center" container>
             <Grid item>
               <Card className={classes.cardForm}>
                 <CardContent>
@@ -195,12 +199,16 @@ export default function PortfolioContactSection({ animate, variants }: Props) {
                     variants={variants}
                     animate={animate ? "yVisibleGrid" : "yTopHidden"}
                   >
-                    <Grid justify="center" container>
+                    <Grid
+                      style={{ padding: "5rem 0 3rem" }}
+                      justify="center"
+                      container
+                    >
                       <motion.div variants={variants}>
                         <Grid item>
                           <Link href="https://github.com/benzend">
                             <IconButton className={classes.linkIcons}>
-                              <GitHub />
+                              <GitHub className={classes.icons} />
                             </IconButton>
                           </Link>
                         </Grid>
@@ -209,16 +217,16 @@ export default function PortfolioContactSection({ animate, variants }: Props) {
                         <Grid item>
                           <Link href="https://twitter.com/@TheBenzend">
                             <IconButton className={classes.linkIcons}>
-                              <Twitter />
+                              <Twitter className={classes.icons} />
                             </IconButton>
                           </Link>
                         </Grid>
                       </motion.div>
                       <motion.div variants={variants}>
                         <Grid item>
-                          <Link href="https://github.com/benzend">
+                          <Link href="https://www.linkedin.com/in/benjamin-scott-62a3741b1/">
                             <IconButton className={classes.linkIcons}>
-                              <LinkedIn />
+                              <LinkedIn className={classes.icons} />
                             </IconButton>
                           </Link>
                         </Grid>
@@ -227,7 +235,7 @@ export default function PortfolioContactSection({ animate, variants }: Props) {
                         <Grid item>
                           <Link href="mailto: benjamin.scottt.dev@gmail.com">
                             <IconButton className={classes.linkIcons}>
-                              <Mail />
+                              <Mail className={classes.icons} />
                             </IconButton>
                           </Link>
                         </Grid>
