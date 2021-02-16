@@ -62,19 +62,19 @@ export default function Home() {
     },
     xLeftHidden: {
       opacity: 0,
-      x: -100,
+      x: -50,
     },
     xRightHidden: {
       opacity: 0,
-      x: 100,
+      x: 50,
     },
     yTopHidden: {
       opacity: 0,
-      y: -100,
+      y: -50,
     },
     yBottomHidden: {
       opacity: 0,
-      y: 100,
+      y: 50,
     },
     visibleGrid: {
       opacity: 1,
