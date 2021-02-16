@@ -116,7 +116,6 @@ export default function PortfolioContactSection({ animate, variants }: Props) {
                     name="contact"
                     method="POST"
                     data-netflify="true"
-                    action="/success"
                   >
                     <input type="hidden" name="form-name" value="contact" />
                     <Grid container spacing={2}>

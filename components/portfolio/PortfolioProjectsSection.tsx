@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
   links: {
     marginLeft: "-13px",
   },
+  icons: {
+    color: theme.palette.secondary.main,
+  },
 }));
 
 const data = [

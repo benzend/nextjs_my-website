@@ -1,7 +1,7 @@
 import { Box, makeStyles, Typography } from "@material-ui/core";
 import { motion } from "framer-motion";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   header: {
     position: "relative",
     height: "100vh",
@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
   },
   container: {},
   title: {
-    color: "#de094c",
+    color: theme.palette.secondary.main,
   },
   subTitle: {
     color: "#ddf",

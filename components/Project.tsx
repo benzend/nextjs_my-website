@@ -48,12 +48,12 @@ export default function Project({
       <Box className={classes.links}>
         <a href={liveUrl}>
           <IconButton>
-            <Language className="white" />
+            <Language className={classes.icons} />
           </IconButton>
         </a>
         <a href={gitHubUrl}>
           <IconButton>
-            <GitHub className="white" />
+            <GitHub className={classes.icons} />
           </IconButton>
         </a>
       </Box>
