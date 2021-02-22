@@ -1,10 +1,10 @@
 import BackgroundEarth from "../../components/BackgroundEarth";
-import Header from "../Header";
-import Nav from "../../components/portfolio/PortfolioNav";
-import Projects from "../../components/portfolio/PortfolioProjectsSection";
-import About from "../../components/portfolio/PortfolioAboutSection";
-import Contact from "../../components/portfolio/PortfolioContactSection";
-import Footer from "../../components/portfolio/PortfolioFooter";
+import Header from "../../components/portfolio-components/PortfolioHeader";
+import Nav from "../../components/portfolio-components/PortfolioNav";
+import Projects from "../../components/portfolio-components/PortfolioProjectsSection";
+import About from "../../components/portfolio-components/PortfolioAboutSection";
+import Contact from "../../components/portfolio-components/PortfolioContactSection";
+import Footer from "../../components/portfolio-components/PortfolioFooter";
 import { useViewportScroll } from "framer-motion";
 import { Box, makeStyles } from "@material-ui/core";
 import { useEffect, useState } from "react";
