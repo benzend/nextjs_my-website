@@ -7,7 +7,6 @@ import {
   Grid,
   Button,
 } from "@material-ui/core";
-import { useEffect, useRef } from "react";
 
 import { motion } from "framer-motion";
 
