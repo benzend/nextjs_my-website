@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   secondaryTitle: {
     background: theme.palette.secondary.main,
     borderRadius: ".1rem",
-    padding: "0 .2rem",
+    padding: "0 .5rem",
     color: theme.palette.secondary.contrastText,
   },
 }));

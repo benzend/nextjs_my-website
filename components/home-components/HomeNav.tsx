@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -16,6 +16,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { Home, Work, ContactMail } from "@material-ui/icons";
+import { Button } from "@material-ui/core";
 
 const drawerWidth = 240;
 
@@ -74,6 +75,15 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
+  invisibleButton: {
+    border: "none",
+    padding: 0,
+    margin: 0,
+    width: "100%",
+    height: "100%",
+    background: "none",
+    outline: "none",
+  },
 }));
 
 interface IHomeNavProps {
@@ -96,6 +106,7 @@ export const HomeNav = ({
     drawer,
     drawerPaper,
     drawerHeader,
+    invisibleButton,
   } = useStyles();
   const theme = useTheme();
 
@@ -141,30 +152,42 @@ export const HomeNav = ({
         </div>
         <Divider />
         <List>
-          <ListItem button>
-            <ListItemIcon>
-              <Home />
-            </ListItemIcon>
-            <ListItemText primary={"Home"} />
-          </ListItem>
+          <button onClick={drawerCloseHandler} className={invisibleButton}>
+            <Link href="/">
+              <ListItem>
+                <ListItemIcon>
+                  <Home />
+                </ListItemIcon>
+                <ListItemText primary={"Home"} />
+              </ListItem>
+            </Link>
+          </button>
         </List>
         <Divider />
         <List>
-          <ListItem button>
-            <ListItemIcon>
-              <Work />
-            </ListItemIcon>
-            <ListItemText primary={"Portfolio"} />
-          </ListItem>
+          <button onClick={drawerCloseHandler} className={invisibleButton}>
+            <Link href="/portfolio">
+              <ListItem>
+                <ListItemIcon>
+                  <Work />
+                </ListItemIcon>
+                <ListItemText primary={"Portfolio"} />
+              </ListItem>
+            </Link>
+          </button>
         </List>
         <Divider />
         <List>
-          <ListItem button>
-            <ListItemIcon>
-              <ContactMail />
-            </ListItemIcon>
-            <ListItemText primary={"Contact"} />
-          </ListItem>
+          <button onClick={drawerCloseHandler} className={invisibleButton}>
+            <Link href="/portfolio#contact">
+              <ListItem>
+                <ListItemIcon>
+                  <ContactMail />
+                </ListItemIcon>
+                <ListItemText primary={"Contact"} />
+              </ListItem>
+            </Link>
+          </button>
         </List>
       </Drawer>
     </div>

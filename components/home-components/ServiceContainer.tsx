@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     padding: ".8rem 0",
   },
   textStyle: {
-    padding: ".6rem 0",
+    padding: "1rem 0 1.3rem",
   },
 });
 
