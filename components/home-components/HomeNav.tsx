@@ -17,6 +17,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { Home, Work, ContactMail } from "@material-ui/icons";
 import { Button } from "@material-ui/core";
+import { motion } from "framer-motion";
 
 const drawerWidth = 240;
 
@@ -112,84 +113,91 @@ export const HomeNav = ({
 
   return (
     <div className={root}>
-      <CssBaseline />
-      <AppBar
-        position="fixed"
-        className={clsx(appBar, {
-          [appBarShift]: open,
-        })}
-        color="secondary"
+      <motion.div
+        style={{ width: "100vw" }}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ delay: 0.3, duration: 1 }}
       >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={drawerOpenHandler}
-            edge="start"
-            className={clsx(menuButton, open && hide)}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        className={drawer}
-        variant="persistent"
-        anchor="left"
-        open={open}
-        classes={{
-          paper: drawerPaper,
-        }}
-      >
-        <div className={drawerHeader}>
-          <IconButton onClick={drawerCloseHandler}>
-            {theme.direction === "ltr" ? (
-              <ChevronLeftIcon />
-            ) : (
-              <ChevronRightIcon />
-            )}
-          </IconButton>
-        </div>
-        <Divider />
-        <List>
-          <button onClick={drawerCloseHandler} className={invisibleButton}>
-            <Link href="/">
-              <ListItem>
-                <ListItemIcon>
-                  <Home />
-                </ListItemIcon>
-                <ListItemText primary={"Home"} />
-              </ListItem>
-            </Link>
-          </button>
-        </List>
-        <Divider />
-        <List>
-          <button onClick={drawerCloseHandler} className={invisibleButton}>
-            <Link href="/portfolio">
-              <ListItem>
-                <ListItemIcon>
-                  <Work />
-                </ListItemIcon>
-                <ListItemText primary={"Portfolio"} />
-              </ListItem>
-            </Link>
-          </button>
-        </List>
-        <Divider />
-        <List>
-          <button onClick={drawerCloseHandler} className={invisibleButton}>
-            <Link href="/portfolio#contact">
-              <ListItem>
-                <ListItemIcon>
-                  <ContactMail />
-                </ListItemIcon>
-                <ListItemText primary={"Contact"} />
-              </ListItem>
-            </Link>
-          </button>
-        </List>
-      </Drawer>
+        <CssBaseline />
+        <AppBar
+          position="fixed"
+          className={clsx(appBar, {
+            [appBarShift]: open,
+          })}
+          color="secondary"
+        >
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={drawerOpenHandler}
+              edge="start"
+              className={clsx(menuButton, open && hide)}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+        <Drawer
+          className={drawer}
+          variant="persistent"
+          anchor="left"
+          open={open}
+          classes={{
+            paper: drawerPaper,
+          }}
+        >
+          <div className={drawerHeader}>
+            <IconButton onClick={drawerCloseHandler}>
+              {theme.direction === "ltr" ? (
+                <ChevronLeftIcon />
+              ) : (
+                <ChevronRightIcon />
+              )}
+            </IconButton>
+          </div>
+          <Divider />
+          <List>
+            <button onClick={drawerCloseHandler} className={invisibleButton}>
+              <Link href="/">
+                <ListItem>
+                  <ListItemIcon>
+                    <Home />
+                  </ListItemIcon>
+                  <ListItemText primary={"Home"} />
+                </ListItem>
+              </Link>
+            </button>
+          </List>
+          <Divider />
+          <List>
+            <button onClick={drawerCloseHandler} className={invisibleButton}>
+              <Link href="/portfolio">
+                <ListItem>
+                  <ListItemIcon>
+                    <Work />
+                  </ListItemIcon>
+                  <ListItemText primary={"Portfolio"} />
+                </ListItem>
+              </Link>
+            </button>
+          </List>
+          <Divider />
+          <List>
+            <button onClick={drawerCloseHandler} className={invisibleButton}>
+              <Link href="/portfolio#contact">
+                <ListItem>
+                  <ListItemIcon>
+                    <ContactMail />
+                  </ListItemIcon>
+                  <ListItemText primary={"Contact"} />
+                </ListItem>
+              </Link>
+            </button>
+          </List>
+        </Drawer>
+      </motion.div>
     </div>
   );
 };

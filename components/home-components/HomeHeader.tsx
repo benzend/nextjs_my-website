@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HomeHeader() {
   const classes = useStyles();
+  const loadTime = 1;
   return (
     <Box className={classes.root}>
       <Container>
@@ -50,6 +51,7 @@ export default function HomeHeader() {
             <motion.div
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0 + loadTime }}
             >
               <Typography className={classes.title} variant="h1">
                 MadeUnlinked
@@ -58,7 +60,7 @@ export default function HomeHeader() {
             <motion.div
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.4 + loadTime }}
             >
               <Typography className={classes.subtitle} variant="h2">
                 Web Development Made Easy
@@ -69,7 +71,7 @@ export default function HomeHeader() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
+              transition={{ delay: 1 + loadTime }}
             >
               <Typography className={classes.ctaText} variant="body1">
                 Do You Need An App Or Website?
@@ -79,7 +81,7 @@ export default function HomeHeader() {
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.4 }}
+              transition={{ delay: 1.4 + loadTime }}
             >
               <Button fullWidth variant="contained" color="secondary">
                 <Link href="/contact">Click Here</Link>
