@@ -14,18 +14,31 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
     width: "100vw",
-    background:
-      "url('https://images.pexels.com/photos/34153/pexels-photo.jpg') no-repeat center/cover",
   },
   title: {
-    color: theme.palette.secondary.main,
+    color: theme.palette.secondary.contrastText,
     fontSize: "2.5rem",
     textAlign: "center",
+    textShadow: "4px 0 5px #0007",
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "4rem",
+    },
+  },
+  title2: {
+    color: theme.palette.secondary.main,
+    textShadow: "4px 0 5px #0007",
+  },
+  titleContainer: {
+    padding: "1rem 0 2rem 0",
   },
   subtitle: {
     color: theme.palette.primary.contrastText,
-    fontSize: "1.3rem",
+    fontSize: "1rem",
     textAlign: "center",
+    textShadow: "4px 0 5px #0007",
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "1.8rem",
+    },
   },
   textContainer: {
     height: "100vh",
@@ -37,6 +50,10 @@ const useStyles = makeStyles((theme) => ({
   ctaText: {
     color: theme.palette.primary.contrastText,
     textAlign: "center",
+    textShadow: "4px 0 5px #0007",
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "1.5rem",
+    },
   },
 }));
 
@@ -48,15 +65,17 @@ export default function HomeHeader() {
       <Container>
         <Grid className={classes.textContainer} container>
           <Grid item>
-            <motion.div
-              initial={{ y: -50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0 + loadTime }}
-            >
-              <Typography className={classes.title} variant="h1">
-                MadeUnlinked
-              </Typography>
-            </motion.div>
+            <Box className={classes.titleContainer}>
+              <motion.div
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0 + loadTime }}
+              >
+                <Typography className={classes.title} variant="h1">
+                  Made<span className={classes.title2}>Unlinked</span>
+                </Typography>
+              </motion.div>
+            </Box>
             <motion.div
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}

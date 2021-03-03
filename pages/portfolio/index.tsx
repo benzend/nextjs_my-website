@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import { Box, makeStyles } from "@material-ui/core";
+import { useViewportScroll } from "framer-motion";
 import BackgroundEarth from "../../components/BackgroundEarth";
 import Header from "../../components/portfolio-components/PortfolioHeader";
 import Nav from "../../components/portfolio-components/PortfolioNav";
@@ -5,9 +8,7 @@ import Projects from "../../components/portfolio-components/PortfolioProjectsSec
 import About from "../../components/portfolio-components/PortfolioAboutSection";
 import Contact from "../../components/portfolio-components/PortfolioContactSection";
 import Footer from "../../components/portfolio-components/PortfolioFooter";
-import { useViewportScroll } from "framer-motion";
-import { Box, makeStyles } from "@material-ui/core";
-import { useEffect, useState } from "react";
+import { variants } from "../../utils/variants";
 
 const useStyles = makeStyles({
   bg: {
@@ -44,60 +45,6 @@ export default function Home() {
       unsubscribeY();
     };
   }, []);
-
-  const variants = {
-    hiddenByOpacity: {
-      opacity: 0,
-    },
-    visibleByOpacity: {
-      opacity: 1,
-    },
-    visibleByX: {
-      opacity: 1,
-      x: 0,
-    },
-    visibleByY: {
-      opacity: 1,
-      y: 0,
-    },
-    xLeftHidden: {
-      opacity: 0,
-      x: -50,
-    },
-    xRightHidden: {
-      opacity: 0,
-      x: 50,
-    },
-    yTopHidden: {
-      opacity: 0,
-      y: -50,
-    },
-    yBottomHidden: {
-      opacity: 0,
-      y: 50,
-    },
-    visibleGrid: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-    xVisibleGrid: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-    yVisibleGrid: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-  };
-
   return (
     <Box className={classes.bg}>
       <BackgroundEarth animate={scrollY.get()} />

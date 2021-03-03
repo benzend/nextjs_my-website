@@ -13,7 +13,7 @@ import {
   Divider,
 } from "@material-ui/core";
 import { GitHub, LinkedIn, Mail, Twitter } from "@material-ui/icons";
-import { motion } from "framer-motion";
+import { AnimationProps, motion } from "framer-motion";
 
 function Copyright() {
   return (
@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
 
 interface Props {
   animate: boolean;
-  variants: any;
+  variants: AnimationProps["variants"];
 }
 
 export default function PortfolioContactSection({ animate, variants }: Props) {

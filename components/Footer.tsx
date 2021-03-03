@@ -12,7 +12,7 @@ import { GitHub, LinkedIn, Twitter } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: theme.palette.primary.main,
+    background: theme.palette.secondary.main,
     padding: "1.3rem",
   },
   icons: {

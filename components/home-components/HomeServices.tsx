@@ -7,15 +7,16 @@ import {
 } from "@material-ui/core";
 import {
   Code,
-  DesktopMac,
   FlashOn,
   School,
   StayCurrentPortrait,
   Web,
 } from "@material-ui/icons";
-import { ServiceContainer } from "./ServiceContainer";
+import { AnimationProps, motion } from "framer-motion";
+import { ServicesContainer } from "./ServicesContainer";
 
 const useStyles = makeStyles((theme) => ({
+  root: {},
   mainContainer: {
     padding: "1rem 0",
   },
@@ -25,96 +26,176 @@ const useStyles = makeStyles((theme) => ({
   mainTitle: {
     padding: ".3rem 0",
     marginTop: "1rem",
+    textShadow: "0 10px 3px #0007",
+    textAlign: "center",
+    color: theme.palette.secondary.contrastText,
   },
   secondaryTitle: {
-    background: theme.palette.secondary.main,
+    textAlign: "center",
     borderRadius: ".1rem",
     padding: "0 .5rem",
-    marginTop: "2rem",
+    margin: "2rem 0 3rem",
+    textShadow: "0 10px 3px #0007",
     color: theme.palette.secondary.contrastText,
+  },
+  serviceGrid: {
+    flexDirection: "row",
+  },
+  listItem: {
+    "&::before": {
+      content: '"- "',
+    },
   },
 }));
 
-export const HomeServices = () => {
+interface IHomeServicesProps {
+  animateTitle: boolean;
+  animateWebsites: boolean;
+  animateApps: boolean;
+  animateMentoring: boolean;
+  variants: AnimationProps["variants"];
+}
+
+export const HomeServices = ({
+  animateTitle,
+  animateWebsites,
+  animateApps,
+  animateMentoring,
+  variants,
+}: IHomeServicesProps) => {
   const {
     mainTitle,
     secondaryTitle,
     mainContainer,
     secondaryContainer,
+    root,
+    serviceGrid,
+    listItem,
   } = useStyles();
   return (
-    <Container>
-      <Typography className={mainTitle} variant="h2">
-        Services
-      </Typography>
+    <Container className={root}>
+      <Box overflow="hidden">
+        <motion.div
+          variants={variants}
+          animate={animateTitle ? "visibleByX" : "yBottomHidden"}
+        >
+          <Typography className={mainTitle} variant="h2">
+            Services
+          </Typography>
+        </motion.div>
+      </Box>
       <Grid className={mainContainer} container>
         <Grid item>
-          <Box className={secondaryContainer}>
-            <Typography className={secondaryTitle} variant="h4" component="h3">
-              Websites
-            </Typography>
-            <ServiceContainer
-              title="Next.js"
-              link="/next-pricing"
-              Icon={FlashOn}
-            >
-              If you want an extremely customizable site where you can add
-              detail to every little pixle and light speed performance with SEO
-              in mind then using Next.js is what will get you there.
-            </ServiceContainer>
-            <ServiceContainer
-              title="Wordpress"
-              link="/wordpress-pricing"
-              Icon={Web}
-            >
-              Wordpress allows for very quick production and easy editability.
-              It is one of the most used website builders out there with
-              thousands of plugins and themes to work with.
-            </ServiceContainer>
-          </Box>
+          <ServicesContainer
+            mainTitle="Websites"
+            mainTitleStyle={secondaryTitle}
+            animate={animateWebsites}
+            rootStyle={secondaryContainer}
+            variants={variants}
+            listItemStyle={listItem}
+            serviceGridStyle={serviceGrid}
+            services={[
+              {
+                title: "Next.js",
+                icon: FlashOn,
+                link: "next-pricing",
+                descs: [
+                  "Extremely Fast Performance",
+                  "Fully Customizable",
+                  "Low Maintenance",
+                  "Easily Scaleable",
+                ],
+              },
+              {
+                title: "Wordpress",
+                icon: Web,
+                link: "wordpress-pricing",
+                descs: [
+                  "Quick Building / Prototyping",
+                  "Easy Customizability",
+                  "Thousands of Plugins",
+                ],
+              },
+            ]}
+          />
         </Grid>
         <Grid item>
-          <Box className={secondaryContainer}>
-            <Typography className={secondaryTitle} variant="h4" component="h3">
-              Apps
-            </Typography>
-            <ServiceContainer
-              title="React.js"
-              link="/react-pricing"
-              Icon={Code}
-            >
-              React.js is the perfect framework to develop highly dynamic sites
-              and applications. It goes hand and hand with efficiency and
-              flexibility, making it the most popular framework to date!
-            </ServiceContainer>
-            <ServiceContainer
-              title="React Native (Mobile)"
-              link="/react-native-pricing"
-              Icon={StayCurrentPortrait}
-            >
-              Do you need an app that just runs on Android or IPhone? React
-              Native is an amazing framework built just for that! React Native
-              uses React as its backbone making it very powerful and gives your
-              app the options to do whatever it wants.
-            </ServiceContainer>
-          </Box>
+          <ServicesContainer
+            mainTitle="Apps"
+            mainTitleStyle={secondaryTitle}
+            animate={animateApps}
+            rootStyle={secondaryContainer}
+            variants={variants}
+            listItemStyle={listItem}
+            serviceGridStyle={serviceGrid}
+            services={[
+              {
+                title: "React.js",
+                icon: Code,
+                link: "react-pricing",
+                descs: [
+                  "Lightning Fast Performance",
+                  "Fully Customizable",
+                  "Most Popular Framework (Library)",
+                  "Easily Scaleable",
+                ],
+              },
+              {
+                title: "React Native (Mobile)",
+                icon: StayCurrentPortrait,
+                link: "react-native-pricing",
+                descs: [
+                  "Specifically Mobile",
+                  "Easy Prototyping",
+                  "React Based",
+                ],
+              },
+            ]}
+          />
         </Grid>
         <Grid item>
-          <Box className={secondaryContainer}>
-            <Typography className={secondaryTitle} variant="h4" component="h3">
-              Mentoring
-            </Typography>
-            <ServiceContainer
-              title="Web Development"
-              link="/mentorship-pricing"
-              Icon={School}
-            >
-              Since working with HTML, CSS, JavaScript and React is what I do
-              for a living, I also offer mentorship services in any of these
-              areas! I provide high quality instructoring making sure that you
-              know exactly what you are doing.
-            </ServiceContainer>
-          </Box>
+          <ServicesContainer
+            mainTitle="Web Development"
+            mainTitleStyle={secondaryTitle}
+            animate={animateMentoring}
+            rootStyle={secondaryContainer}
+            variants={variants}
+            listItemStyle={listItem}
+            serviceGridStyle={serviceGrid}
+            services={[
+              {
+                title: "HTML/CSS",
+                icon: School,
+                link: "mentorship-pricing",
+                descs: [
+                  "Lightning Fast Performance",
+                  "Fully Customizable",
+                  "Most Popular Framework (Library)",
+                  "Easily Scaleable",
+                ],
+              },
+              {
+                title: "JavaScript",
+                icon: School,
+                link: "mentorship-pricing",
+                descs: [
+                  "Specifically Mobile",
+                  "Easy Prototyping",
+                  "React Based",
+                ],
+              },
+              {
+                title: "React",
+                icon: School,
+                link: "mentorship-pricing",
+                descs: [
+                  "Specifically Mobile",
+                  "Easy Prototyping",
+                  "React Based",
+                ],
+              },
+            ]}
+          />
         </Grid>
       </Grid>
     </Container>
