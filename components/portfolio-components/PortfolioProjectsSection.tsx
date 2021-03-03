@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "394px",
     marginBottom: "1rem",
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+    },
   },
   mainTitle: {
     padding: "10rem 0",
@@ -24,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
   },
   textContainer: {
     height: "200px",
+    [theme.breakpoints.down("xs")]: {
+      height: "240px",
+    },
   },
   desc: {
     color: "#ccc",

@@ -10,13 +10,22 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "column",
+    [theme.breakpoints.down("xs")]: {},
   },
   container: {},
   title: {
     color: theme.palette.secondary.main,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "3rem",
+      textAlign: "center",
+    },
   },
   subTitle: {
     color: "#ddf",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "2rem",
+      textAlign: "center",
+    },
   },
 }));
 

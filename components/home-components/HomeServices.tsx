@@ -33,13 +33,13 @@ const useStyles = makeStyles((theme) => ({
   secondaryTitle: {
     textAlign: "center",
     borderRadius: ".1rem",
-    padding: "0 .5rem",
     margin: "2rem 0 3rem",
     textShadow: "0 10px 3px #0007",
     color: theme.palette.secondary.contrastText,
   },
   serviceGrid: {
-    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
   listItem: {
     "&::before": {

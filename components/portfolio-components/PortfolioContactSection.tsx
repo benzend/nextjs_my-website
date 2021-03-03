@@ -42,6 +42,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     maxWidth: "500px",
     height: "350px",
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+      height: "400px",
+    },
   },
   card2: {
     marginTop: theme.spacing(8),
@@ -51,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
     height: "350px",
     background: theme.palette.primary.dark,
     color: "#f1f1f1",
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+    },
   },
   avatar: {
     margin: theme.spacing(1),
@@ -88,13 +95,8 @@ export default function PortfolioContactSection({ animate, variants }: Props) {
   const classes = useStyles();
 
   return (
-    <Container
-      id="contact"
-      className={classes.root}
-      component="main"
-      maxWidth="lg"
-    >
-      <Box>
+    <Container id="contact" className={classes.root} maxWidth="lg">
+      <Box overflow="hidden">
         <motion.div
           variants={variants}
           animate={animate ? "visibleByY" : "yBottomHidden"}

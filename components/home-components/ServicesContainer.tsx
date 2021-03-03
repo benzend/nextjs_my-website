@@ -31,33 +31,35 @@ export const ServicesContainer = ({
 }: IServicesContainer) => {
   return (
     <Box className={rootStyle}>
-      <Typography className={mainTitleStyle} variant="h4" component="h3">
-        {mainTitle}
-      </Typography>
+      <Box>
+        <Typography className={mainTitleStyle} variant="h4" component="h3">
+          {mainTitle}
+        </Typography>
 
-      <Grid className={serviceGridStyle} container>
-        {services.map((service) => (
-          <Grid key={service.title} item>
-            <ServiceContainer
-              title={service.title}
-              link={service.link}
-              Icon={service.icon}
-            >
-              <>
-                {service.descs.map((description, i) => (
-                  <Typography
-                    key={service.title + " " + i}
-                    variant="body2"
-                    className={listItemStyle}
-                  >
-                    {description}
-                  </Typography>
-                ))}
-              </>
-            </ServiceContainer>
-          </Grid>
-        ))}
-      </Grid>
+        <Grid className={serviceGridStyle} container>
+          {services.map((service) => (
+            <Grid key={service.title} item>
+              <ServiceContainer
+                title={service.title}
+                link={service.link}
+                Icon={service.icon}
+              >
+                <>
+                  {service.descs.map((description, i) => (
+                    <Typography
+                      key={service.title + " " + i}
+                      variant="body2"
+                      className={listItemStyle}
+                    >
+                      {description}
+                    </Typography>
+                  ))}
+                </>
+              </ServiceContainer>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </Box>
   );
 };

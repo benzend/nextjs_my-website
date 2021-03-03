@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, makeStyles } from "@material-ui/core";
+import { Box, Container, makeStyles } from "@material-ui/core";
 import { useViewportScroll } from "framer-motion";
 import BackgroundEarth from "../../components/BackgroundEarth";
 import Header from "../../components/portfolio-components/PortfolioHeader";
