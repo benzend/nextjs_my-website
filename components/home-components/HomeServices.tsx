@@ -4,6 +4,7 @@ import {
   Grid,
   Typography,
   makeStyles,
+  Divider,
 } from "@material-ui/core";
 import {
   Code,
@@ -19,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
   root: {},
   mainContainer: {
     padding: "1rem 0",
+    justifyContent: "center",
+    alignItems: "center",
   },
   secondaryContainer: {
     padding: "1.3rem 0",
@@ -49,20 +52,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 interface IHomeServicesProps {
-  animateTitle: boolean;
-  animateWebsites: boolean;
-  animateApps: boolean;
-  animateMentoring: boolean;
   variants: AnimationProps["variants"];
 }
 
-export const HomeServices = ({
-  animateTitle,
-  animateWebsites,
-  animateApps,
-  animateMentoring,
-  variants,
-}: IHomeServicesProps) => {
+export const HomeServices = ({ variants }: IHomeServicesProps) => {
   const {
     mainTitle,
     secondaryTitle,
@@ -73,23 +66,18 @@ export const HomeServices = ({
     listItem,
   } = useStyles();
   return (
-    <Container className={root}>
+    <Container id="services" className={root}>
       <Box overflow="hidden">
-        <motion.div
-          variants={variants}
-          animate={animateTitle ? "visibleByX" : "yBottomHidden"}
-        >
-          <Typography className={mainTitle} variant="h2">
-            Services
-          </Typography>
-        </motion.div>
+        <Typography className={mainTitle} variant="h2">
+          Services
+        </Typography>
       </Box>
+      <Divider style={{ background: "#fff" }} />
       <Grid className={mainContainer} container>
         <Grid item>
           <ServicesContainer
             mainTitle="Websites"
             mainTitleStyle={secondaryTitle}
-            animate={animateWebsites}
             rootStyle={secondaryContainer}
             variants={variants}
             listItemStyle={listItem}
@@ -123,7 +111,6 @@ export const HomeServices = ({
           <ServicesContainer
             mainTitle="Apps"
             mainTitleStyle={secondaryTitle}
-            animate={animateApps}
             rootStyle={secondaryContainer}
             variants={variants}
             listItemStyle={listItem}
@@ -155,9 +142,8 @@ export const HomeServices = ({
         </Grid>
         <Grid item>
           <ServicesContainer
-            mainTitle="Web Development"
+            mainTitle="Mentorship"
             mainTitleStyle={secondaryTitle}
-            animate={animateMentoring}
             rootStyle={secondaryContainer}
             variants={variants}
             listItemStyle={listItem}
@@ -173,6 +159,7 @@ export const HomeServices = ({
                   "Most Popular Framework (Library)",
                   "Easily Scaleable",
                 ],
+                mentorship: true,
               },
               {
                 title: "JavaScript",
@@ -183,6 +170,7 @@ export const HomeServices = ({
                   "Easy Prototyping",
                   "React Based",
                 ],
+                mentorship: true,
               },
               {
                 title: "React",
@@ -193,6 +181,7 @@ export const HomeServices = ({
                   "Easy Prototyping",
                   "React Based",
                 ],
+                mentorship: true,
               },
             ]}
           />

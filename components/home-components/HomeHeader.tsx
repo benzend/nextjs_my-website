@@ -23,6 +23,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       fontSize: "4rem",
     },
+    [theme.breakpoints.up("md")]: {
+      fontSize: "6rem",
+    },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: "8rem",
+    },
   },
   title2: {
     color: theme.palette.secondary.main,
@@ -39,6 +45,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       fontSize: "1.8rem",
     },
+    [theme.breakpoints.up("md")]: {
+      fontSize: "2rem",
+    },
   },
   textContainer: {
     height: "100vh",
@@ -46,6 +55,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
+    [theme.breakpoints.up("md")]: {
+      justifyContent: "space-around",
+    },
   },
   ctaText: {
     color: theme.palette.primary.contrastText,
@@ -53,6 +65,16 @@ const useStyles = makeStyles((theme) => ({
     textShadow: "4px 0 5px #0007",
     [theme.breakpoints.up("sm")]: {
       fontSize: "1.5rem",
+    },
+    [theme.breakpoints.up("md")]: {},
+  },
+  ctaButton: {
+    background:
+      "linear-gradient(180deg, #FF2727 0%, rgba(235, 81, 81, 0) 100%)",
+    boxShadow: "none",
+    borderRadius: 0,
+    [theme.breakpoints.up("xl")]: {
+      fontSize: "1.2rem",
     },
   },
 }));
@@ -93,7 +115,7 @@ export default function HomeHeader() {
               transition={{ delay: 1 + loadTime }}
             >
               <Typography className={classes.ctaText} variant="body1">
-                Do You Need An App Or Website?
+                Need An App Or Website?
               </Typography>
             </motion.div>
             <br />
@@ -102,7 +124,12 @@ export default function HomeHeader() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.4 + loadTime }}
             >
-              <Button fullWidth variant="contained" color="secondary">
+              <Button
+                className={classes.ctaButton}
+                fullWidth
+                variant="contained"
+                color="secondary"
+              >
                 <Link href="/contact">Click Here</Link>
               </Button>
             </motion.div>

@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   appBar: {
+    position: "fixed",
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -91,7 +92,7 @@ interface IHomeNavProps {
   open: boolean;
 }
 
-export const HomeNav = ({
+export const HomeMobileNav = ({
   drawerCloseHandler,
   drawerOpenHandler,
   open,
@@ -119,7 +120,6 @@ export const HomeNav = ({
       >
         <CssBaseline />
         <AppBar
-          position="fixed"
           className={clsx(appBar, {
             [appBarShift]: open,
           })}

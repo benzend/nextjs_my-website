@@ -1,19 +1,18 @@
 import { useEffect, useState } from "react";
-import { useViewportScroll } from "framer-motion";
+import { useMediaQuery } from "@material-ui/core";
 import HomeHeader from "../components/home-components/HomeHeader";
-import { HomeNav } from "../components/home-components/HomeNav";
+import { HomeMobileNav } from "../components/home-components/HomeMobileNav";
 import { HomeServices } from "../components/home-components/HomeServices";
 import { variants } from "../utils/variants";
 import Footer from "../components/Footer";
 import { HomeBackground } from "../components/home-components/HomeBackground";
+import { HomeDesktopNav } from "../components/home-components/HomeDesktopNav";
 
 export default function Home() {
-  const { scrollY } = useViewportScroll();
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [animateServiceTitle, setAnimateServiceTitle] = useState(false);
-  const [animateWebsites, setAnimateWebsites] = useState(false);
-  const [animateApps, setAnimateApps] = useState(false);
-  const [animateMentoring, setAnimateMentoring] = useState(false);
+
+  const desktop = useMediaQuery("(min-width:1000px)");
+
   const drawerOpenHandler = () => {
     setDrawerOpen(true);
   };
@@ -21,41 +20,20 @@ export default function Home() {
     setDrawerOpen(false);
   };
 
-  useEffect(() => {
-    function updateVisibilty() {
-      const serviceTitleReady = scrollY.get() > 140;
-      const websitesReady = scrollY.get() > 200;
-      const appsReady = scrollY.get() > 900;
-      const mentoringReady = scrollY.get() > 1650;
-      setAnimateServiceTitle(serviceTitleReady);
-      setAnimateWebsites(websitesReady);
-      setAnimateApps(appsReady);
-      setAnimateMentoring(mentoringReady);
-    }
-
-    const unsubscribeY = scrollY.onChange(updateVisibilty);
-
-    return () => {
-      unsubscribeY();
-    };
-  }, []);
-
   return (
     <>
       <HomeBackground />
-      <HomeNav
-        open={drawerOpen}
-        drawerOpenHandler={drawerOpenHandler}
-        drawerCloseHandler={drawerCloseHandler}
-      />
+      {desktop ? (
+        <HomeDesktopNav />
+      ) : (
+        <HomeMobileNav
+          open={drawerOpen}
+          drawerOpenHandler={drawerOpenHandler}
+          drawerCloseHandler={drawerCloseHandler}
+        />
+      )}
       <HomeHeader />
-      <HomeServices
-        animateTitle={animateServiceTitle}
-        animateWebsites={animateWebsites}
-        animateApps={animateApps}
-        animateMentoring={animateMentoring}
-        variants={variants}
-      />
+      <HomeServices variants={variants} />
       <Footer />
     </>
   );

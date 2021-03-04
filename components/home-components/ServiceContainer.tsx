@@ -16,6 +16,7 @@ interface IServiceContainer {
   children: ReactChild;
   link: string;
   Icon: OverridableComponent<SvgIconTypeMap<{}, "svg">>;
+  mentorship?: boolean;
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -23,9 +24,10 @@ const useStyles = makeStyles((theme) => ({
     width: "300px",
     background: "#4a4a4a",
     margin: "2rem 0",
-    [theme.breakpoints.up("sm")]: {
-      width: "40%",
-    },
+    height: "370px",
+    boxShadow: "15px 20px 10px #0008",
+    borderRadius: 0,
+    [theme.breakpoints.up("sm")]: {},
   },
   titleStyle: {
     color: theme.palette.secondary.main,
@@ -54,6 +56,7 @@ export const ServiceContainer = ({
   link,
   children,
   Icon,
+  mentorship,
 }: IServiceContainer) => {
   const controls = useAnimation();
   const { ref, inView } = useInView();
@@ -88,7 +91,7 @@ export const ServiceContainer = ({
         <Box>
           <Box pt={6}>
             <Typography className={builtWithText} variant="body1">
-              Built With
+              {mentorship ? "Teaching" : "Built With"}
             </Typography>
             <Typography className={titleStyle} variant="h5" component="h4">
               {title}

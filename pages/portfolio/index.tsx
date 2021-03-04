@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, Container, makeStyles } from "@material-ui/core";
+import { Box, Container, makeStyles, useMediaQuery } from "@material-ui/core";
 import { useViewportScroll } from "framer-motion";
 import BackgroundEarth from "../../components/BackgroundEarth";
 import Header from "../../components/portfolio-components/PortfolioHeader";
@@ -9,6 +9,8 @@ import About from "../../components/portfolio-components/PortfolioAboutSection";
 import Contact from "../../components/portfolio-components/PortfolioContactSection";
 import Footer from "../../components/portfolio-components/PortfolioFooter";
 import { variants } from "../../utils/variants";
+import { HomeDesktopNav } from "../../components/home-components/HomeDesktopNav";
+import { HomeMobileNav } from "../../components/home-components/HomeMobileNav";
 
 const useStyles = makeStyles({
   bg: {
@@ -21,6 +23,10 @@ const useStyles = makeStyles({
 export default function Home() {
   const { scrollY } = useViewportScroll();
 
+  const mobile = useMediaQuery("(max-width:400px)");
+
+  const pixels550 = useMediaQuery("(max-width:550px)");
+
   const classes = useStyles();
 
   const [animateProjects, setAnimateProjects] = useState<boolean>();
@@ -29,11 +35,26 @@ export default function Home() {
 
   const [animateContact, setAnimateContact] = useState<boolean>();
 
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
   useEffect(() => {
     function updateVisibilty() {
-      const projectsReady = scrollY.get() > 500;
-      const aboutReady = scrollY.get() > 3000;
-      const contactReady = scrollY.get() > 4100;
+      let projectsReady: boolean = false;
+      let aboutReady: boolean = false;
+      let contactReady: boolean = false;
+      if (mobile) {
+        projectsReady = scrollY.get() > 500;
+        aboutReady = scrollY.get() > 7800;
+        contactReady = scrollY.get() > 9700;
+      } else if (pixels550) {
+        projectsReady = scrollY.get() > 500;
+        aboutReady = scrollY.get() > 7800;
+        contactReady = scrollY.get() > 9100;
+      } else {
+        projectsReady = scrollY.get() > 500;
+        aboutReady = scrollY.get() > 3000;
+        contactReady = scrollY.get() > 4600;
+      }
       setAnimateProjects(projectsReady);
       setAnimateAbout(aboutReady);
       setAnimateContact(contactReady);
@@ -45,11 +66,27 @@ export default function Home() {
       unsubscribeY();
     };
   }, []);
+
+  const drawerOpenHandler = () => {
+    setDrawerOpen(true);
+  };
+  const drawerCloseHandler = () => {
+    setDrawerOpen(false);
+  };
+
   return (
     <Box className={classes.bg}>
       <BackgroundEarth animate={scrollY.get()} />
 
-      <Nav />
+      {pixels550 ? (
+        <HomeMobileNav
+          open={drawerOpen}
+          drawerOpenHandler={drawerOpenHandler}
+          drawerCloseHandler={drawerCloseHandler}
+        />
+      ) : (
+        <HomeDesktopNav />
+      )}
 
       <Header />
 

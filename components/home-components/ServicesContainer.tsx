@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { ServiceContainer } from "./ServiceContainer";
 
 interface IServicesContainer {
-  animate: boolean;
   rootStyle: any;
   variants: any;
   mainTitle: string;
@@ -16,11 +15,11 @@ interface IServicesContainer {
     link: string;
     icon: OverridableComponent<SvgIconTypeMap<{}, "svg">>;
     descs: string[];
+    mentorship?: boolean;
   }[];
 }
 
 export const ServicesContainer = ({
-  animate,
   rootStyle,
   variants,
   mainTitle,
@@ -36,13 +35,14 @@ export const ServicesContainer = ({
           {mainTitle}
         </Typography>
 
-        <Grid className={serviceGridStyle} container>
+        <Grid spacing={3} className={serviceGridStyle} container>
           {services.map((service) => (
             <Grid key={service.title} item>
               <ServiceContainer
                 title={service.title}
                 link={service.link}
                 Icon={service.icon}
+                mentorship={service.mentorship}
               >
                 <>
                   {service.descs.map((description, i) => (
