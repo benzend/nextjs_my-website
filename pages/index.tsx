@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useMediaQuery } from "@material-ui/core";
 import HomeHeader from "../components/home-components/HomeHeader";
 import { HomeMobileNav } from "../components/home-components/HomeMobileNav";
@@ -20,11 +20,13 @@ export default function Home() {
     setDrawerOpen(false);
   };
 
+  const current = "home";
+
   return (
     <>
       <HomeBackground />
       {desktop ? (
-        <HomeDesktopNav />
+        <HomeDesktopNav current={current} />
       ) : (
         <HomeMobileNav
           open={drawerOpen}

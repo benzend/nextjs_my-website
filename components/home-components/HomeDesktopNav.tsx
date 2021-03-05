@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     color: theme.palette.primary.contrastText,
+    zIndex: 30,
   },
   link: {
     padding: "3px 5px",
@@ -26,7 +27,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const HomeDesktopNav = () => {
+interface IHomeDesktopNav {
+  current: string;
+}
+
+export const HomeDesktopNav = ({ current }: IHomeDesktopNav) => {
   const { root, link } = useStyles();
   return (
     <Box className={root} component="nav">
@@ -34,7 +39,9 @@ export const HomeDesktopNav = () => {
         <Grid spacing={5} justify="flex-end" alignItems="center" container>
           <Grid item>
             <Link href="/">
-              <Box className={link + " current"}>Home</Box>
+              <Box className={current === "home" ? link + " current" : link}>
+                Home
+              </Box>
             </Link>
           </Grid>
           <Grid item>
@@ -49,12 +56,18 @@ export const HomeDesktopNav = () => {
           </Grid>
           <Grid item>
             <Link href="/portfolio">
-              <Box className={link}>Portfolio</Box>
+              <Box
+                className={current === "portfolio" ? link + " current" : link}
+              >
+                Portfolio
+              </Box>
             </Link>
           </Grid>
           <Grid item>
             <Link href="/blog">
-              <Box className={link}>Blog</Box>
+              <Box className={current === "blog" ? link + " current" : link}>
+                Blog
+              </Box>
             </Link>
           </Grid>
         </Grid>

@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     padding: "2rem 0 7rem",
+    marginBottom: "5rem",
   },
   cardForm: {
     marginTop: theme.spacing(8),
@@ -116,10 +117,11 @@ export default function PortfolioContactSection({ animate, variants }: Props) {
                   <form
                     className={classes.form}
                     name="contact"
+                    action="/success"
                     method="POST"
-                    data-netflify="true"
+                    data-netflify={true}
                   >
-                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="contact" value="contact" />
                     <Grid container spacing={2}>
                       <Grid item xs={12} sm={6}>
                         <TextField
@@ -248,10 +250,6 @@ export default function PortfolioContactSection({ animate, variants }: Props) {
             </Grid>
           </Grid>
         </motion.div>
-
-        <Box mt={5}>
-          <Copyright />
-        </Box>
       </Box>
     </Container>
   );

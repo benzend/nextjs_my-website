@@ -5,6 +5,7 @@ import { ServiceContainer } from "./ServiceContainer";
 
 interface IServicesContainer {
   rootStyle: any;
+  rootItemStyle: any;
   variants: any;
   mainTitle: string;
   mainTitleStyle: any;
@@ -27,14 +28,16 @@ export const ServicesContainer = ({
   listItemStyle,
   serviceGridStyle,
   services,
+  rootItemStyle,
 }: IServicesContainer) => {
   return (
-    <Box className={rootStyle}>
-      <Box>
+    <Grid className={rootStyle} container>
+      <Grid className={rootItemStyle} item>
         <Typography className={mainTitleStyle} variant="h4" component="h3">
           {mainTitle}
         </Typography>
-
+      </Grid>
+      <Grid className={rootItemStyle} item>
         <Grid spacing={3} className={serviceGridStyle} container>
           {services.map((service) => (
             <Grid key={service.title} item>
@@ -59,7 +62,7 @@ export const ServicesContainer = ({
             </Grid>
           ))}
         </Grid>
-      </Box>
-    </Box>
+      </Grid>
+    </Grid>
   );
 };

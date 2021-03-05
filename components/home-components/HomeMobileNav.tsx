@@ -14,7 +14,7 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import { Home, Work, ContactMail } from "@material-ui/icons";
+import { Home, Work, ContactMail, Info, Build } from "@material-ui/icons";
 import { motion } from "framer-motion";
 
 const drawerWidth = 240;
@@ -171,6 +171,19 @@ export const HomeMobileNav = ({
           <Divider />
           <List>
             <button onClick={drawerCloseHandler} className={invisibleButton}>
+              <Link href="/#services">
+                <ListItem>
+                  <ListItemIcon>
+                    <Build />
+                  </ListItemIcon>
+                  <ListItemText primary={"Services"} />
+                </ListItem>
+              </Link>
+            </button>
+          </List>
+          <Divider />
+          <List>
+            <button onClick={drawerCloseHandler} className={invisibleButton}>
               <Link href="/portfolio">
                 <ListItem>
                   <ListItemIcon>
@@ -190,6 +203,19 @@ export const HomeMobileNav = ({
                     <ContactMail />
                   </ListItemIcon>
                   <ListItemText primary={"Contact"} />
+                </ListItem>
+              </Link>
+            </button>
+          </List>
+          <Divider />
+          <List>
+            <button onClick={drawerCloseHandler} className={invisibleButton}>
+              <Link href="/blog">
+                <ListItem>
+                  <ListItemIcon>
+                    <Info />
+                  </ListItemIcon>
+                  <ListItemText primary={"Blog"} />
                 </ListItem>
               </Link>
             </button>

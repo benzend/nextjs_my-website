@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { Box, Container, makeStyles, useMediaQuery } from "@material-ui/core";
+import { Box, makeStyles, useMediaQuery } from "@material-ui/core";
 import { useViewportScroll } from "framer-motion";
 import BackgroundEarth from "../../components/BackgroundEarth";
 import Header from "../../components/portfolio-components/PortfolioHeader";
-import Nav from "../../components/portfolio-components/PortfolioNav";
 import Projects from "../../components/portfolio-components/PortfolioProjectsSection";
 import About from "../../components/portfolio-components/PortfolioAboutSection";
 import Contact from "../../components/portfolio-components/PortfolioContactSection";
@@ -74,6 +73,8 @@ export default function Home() {
     setDrawerOpen(false);
   };
 
+  const current = "portfolio";
+
   return (
     <Box className={classes.bg}>
       <BackgroundEarth animate={scrollY.get()} />
@@ -85,7 +86,7 @@ export default function Home() {
           drawerCloseHandler={drawerCloseHandler}
         />
       ) : (
-        <HomeDesktopNav />
+        <HomeDesktopNav current={current} />
       )}
 
       <Header />

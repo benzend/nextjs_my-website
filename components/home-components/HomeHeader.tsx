@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
     width: "100vw",
+    marginBottom: "12rem",
   },
   title: {
     color: theme.palette.secondary.contrastText,
