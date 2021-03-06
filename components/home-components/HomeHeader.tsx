@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "1.8rem",
     },
     [theme.breakpoints.up("md")]: {
-      fontSize: "2rem",
+      fontSize: "3rem",
     },
   },
   textContainer: {
@@ -64,10 +64,13 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.contrastText,
     textAlign: "center",
     textShadow: "4px 0 5px #0007",
+    fontWeight: 200,
     [theme.breakpoints.up("sm")]: {
       fontSize: "1.5rem",
     },
-    [theme.breakpoints.up("md")]: {},
+    [theme.breakpoints.up("md")]: {
+      fontSize: "2.6rem",
+    },
   },
   ctaButton: {
     background:
@@ -75,7 +78,8 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "none",
     borderRadius: 0,
     [theme.breakpoints.up("xl")]: {
-      fontSize: "1.2rem",
+      fontSize: "1.8rem",
+      fontWeight: 300,
     },
   },
 }));
@@ -125,14 +129,16 @@ export default function HomeHeader() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.4 + loadTime }}
             >
-              <Button
-                className={classes.ctaButton}
-                fullWidth
-                variant="contained"
-                color="secondary"
-              >
-                <Link href="/contact">Click Here</Link>
-              </Button>
+              <Link href="/contact">
+                <Button
+                  className={classes.ctaButton}
+                  fullWidth
+                  variant="contained"
+                  color="secondary"
+                >
+                  Click Here
+                </Button>
+              </Link>
             </motion.div>
           </Grid>
         </Grid>
