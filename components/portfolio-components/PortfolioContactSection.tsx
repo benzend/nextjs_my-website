@@ -118,6 +118,7 @@ export default function PortfolioContactSection({ animate, variants }: Props) {
                     className={classes.form}
                     name="contact"
                     method="POST"
+                    action="/success"
                     data-netflify="true"
                   >
                     <input type="hidden" name="form-name" value="contact" />
