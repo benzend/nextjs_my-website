@@ -1,0 +1,1750 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8" class="jsx-257883933"/><meta name="theme-color" content="#3f51b5" class="jsx-257883933"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" class="jsx-257883933"/><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><title>Benjamin Scott | A React.js Web Developer</title><link rel="icon" href="/favicon.ico"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"/><meta name="next-head-count" content="5"/><link rel="preload" href="/_next/static/css/452be0931e91c7c9014e.css" as="style"/><link rel="stylesheet" href="/_next/static/css/452be0931e91c7c9014e.css" data-n-g=""/><noscript data-n-css=""></noscript><link rel="preload" href="/_next/static/chunks/main-fe7caf2377a24d24b236.js" as="script"/><link rel="preload" href="/_next/static/chunks/webpack-95c2b224bccf352ee870.js" as="script"/><link rel="preload" href="/_next/static/chunks/framework.2890804e4782b2c2976a.js" as="script"/><link rel="preload" href="/_next/static/chunks/commons.0ad5f420dff3a0811547.js" as="script"/><link rel="preload" href="/_next/static/chunks/8cbc616a7cc465f9b2a62f6d359c031bb9f62fa5.c225e23eed447fd71017.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/_app-a725197ec6a3df3daa9b.js" as="script"/><link rel="preload" href="/_next/static/chunks/05d954cf.6f29b41b19f6804a37fe.js" as="script"/><link rel="preload" href="/_next/static/chunks/fb7d5399.ec305a25efee862546b2.js" as="script"/><link rel="preload" href="/_next/static/chunks/298afb993e8afff67d45b4773e6533315ecb07c4.81454f4206675c9e0b20.js" as="script"/><link rel="preload" href="/_next/static/chunks/f6d61d50ed421e5ab11c4586545936a9e1be2e13.bcdcce67c70907cccf9e.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/portfolio-2ad9459fc391009ce72c.js" as="script"/><style id="jss-server-side">html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+strong, b {
+  font-weight: 700;
+}
+body {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  background-color: #fafafa;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+body::backdrop {
+  background-color: #fafafa;
+}
+.MuiSvgIcon-root {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+.MuiSvgIcon-colorPrimary {
+  color: #3f51b5;
+}
+.MuiSvgIcon-colorSecondary {
+  color: #f50057;
+}
+.MuiSvgIcon-colorAction {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiSvgIcon-colorError {
+  color: #f44336;
+}
+.MuiSvgIcon-colorDisabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiSvgIcon-fontSizeInherit {
+  font-size: inherit;
+}
+.MuiSvgIcon-fontSizeSmall {
+  font-size: 1.25rem;
+}
+.MuiSvgIcon-fontSizeLarge {
+  font-size: 2.1875rem;
+}
+.MuiPaper-root {
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+}
+.MuiPaper-rounded {
+  border-radius: 4px;
+}
+.MuiPaper-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-elevation0 {
+  box-shadow: none;
+}
+.MuiPaper-elevation1 {
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation2 {
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation3 {
+  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation4 {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation5 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation6 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation7 {
+  box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation8 {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation9 {
+  box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation10 {
+  box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation11 {
+  box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation12 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation13 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation14 {
+  box-shadow: 0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation15 {
+  box-shadow: 0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation16 {
+  box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation17 {
+  box-shadow: 0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation18 {
+  box-shadow: 0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation19 {
+  box-shadow: 0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation20 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation21 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation22 {
+  box-shadow: 0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation23 {
+  box-shadow: 0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation24 {
+  box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+}
+.MuiButtonBase-root {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root.Mui-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+@media print {
+  .MuiButtonBase-root {
+    color-adjust: exact;
+  }
+}
+  .MuiIconButton-root {
+    flex: 0 0 auto;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 12px;
+    overflow: visible;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 50%;
+  }
+  .MuiIconButton-root:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  .MuiIconButton-root.Mui-disabled {
+    color: rgba(0, 0, 0, 0.26);
+    background-color: transparent;
+  }
+@media (hover: none) {
+  .MuiIconButton-root:hover {
+    background-color: transparent;
+  }
+}
+  .MuiIconButton-edgeStart {
+    margin-left: -12px;
+  }
+  .MuiIconButton-sizeSmall.MuiIconButton-edgeStart {
+    margin-left: -3px;
+  }
+  .MuiIconButton-edgeEnd {
+    margin-right: -12px;
+  }
+  .MuiIconButton-sizeSmall.MuiIconButton-edgeEnd {
+    margin-right: -3px;
+  }
+  .MuiIconButton-colorInherit {
+    color: inherit;
+  }
+  .MuiIconButton-colorPrimary {
+    color: #3f51b5;
+  }
+  .MuiIconButton-colorPrimary:hover {
+    background-color: rgba(63, 81, 181, 0.04);
+  }
+@media (hover: none) {
+  .MuiIconButton-colorPrimary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiIconButton-colorSecondary {
+    color: #f50057;
+  }
+  .MuiIconButton-colorSecondary:hover {
+    background-color: rgba(245, 0, 87, 0.04);
+  }
+@media (hover: none) {
+  .MuiIconButton-colorSecondary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiIconButton-sizeSmall {
+    padding: 3px;
+    font-size: 1.125rem;
+  }
+  .MuiIconButton-label {
+    width: 100%;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+  }
+
+  .jss2 {  }
+  .jss5 {  }
+  .jss6 {  }
+  .jss7 {  }
+  .jss8 {  }
+  .jss9 {  }
+  .jss10 {  }
+  .jss15 {  }
+  .jss16 {  }
+  .jss40 {
+    overflow: hidden;
+  }
+  .jss45 {  }
+  .jss50 {  }
+  .MuiTypography-root {
+    margin: 0;
+  }
+  .MuiTypography-body2 {
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+  }
+  .MuiTypography-body1 {
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+  }
+  .MuiTypography-caption {
+    font-size: 0.75rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+  }
+  .MuiTypography-button {
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+  }
+  .MuiTypography-h1 {
+    font-size: 6rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    line-height: 1.167;
+    letter-spacing: -0.01562em;
+  }
+  .MuiTypography-h2 {
+    font-size: 3.75rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: -0.00833em;
+  }
+  .MuiTypography-h3 {
+    font-size: 3rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.167;
+    letter-spacing: 0em;
+  }
+  .MuiTypography-h4 {
+    font-size: 2.125rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.235;
+    letter-spacing: 0.00735em;
+  }
+  .MuiTypography-h5 {
+    font-size: 1.5rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.334;
+    letter-spacing: 0em;
+  }
+  .MuiTypography-h6 {
+    font-size: 1.25rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+  }
+  .MuiTypography-subtitle1 {
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: 0.00938em;
+  }
+  .MuiTypography-subtitle2 {
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.57;
+    letter-spacing: 0.00714em;
+  }
+  .MuiTypography-overline {
+    font-size: 0.75rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 2.66;
+    letter-spacing: 0.08333em;
+    text-transform: uppercase;
+  }
+  .MuiTypography-srOnly {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+  }
+  .MuiTypography-alignLeft {
+    text-align: left;
+  }
+  .MuiTypography-alignCenter {
+    text-align: center;
+  }
+  .MuiTypography-alignRight {
+    text-align: right;
+  }
+  .MuiTypography-alignJustify {
+    text-align: justify;
+  }
+  .MuiTypography-noWrap {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .MuiTypography-gutterBottom {
+    margin-bottom: 0.35em;
+  }
+  .MuiTypography-paragraph {
+    margin-bottom: 16px;
+  }
+  .MuiTypography-colorInherit {
+    color: inherit;
+  }
+  .MuiTypography-colorPrimary {
+    color: #3f51b5;
+  }
+  .MuiTypography-colorSecondary {
+    color: #f50057;
+  }
+  .MuiTypography-colorTextPrimary {
+    color: rgba(0, 0, 0, 0.87);
+  }
+  .MuiTypography-colorTextSecondary {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  .MuiTypography-colorError {
+    color: #f44336;
+  }
+  .MuiTypography-displayInline {
+    display: inline;
+  }
+  .MuiTypography-displayBlock {
+    display: block;
+  }
+  .MuiButton-root {
+    color: rgba(0, 0, 0, 0.87);
+    padding: 6px 16px;
+    font-size: 0.875rem;
+    min-width: 64px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1.75;
+    border-radius: 4px;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+  }
+  .MuiButton-root:hover {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  .MuiButton-root.Mui-disabled {
+    color: rgba(0, 0, 0, 0.26);
+  }
+@media (hover: none) {
+  .MuiButton-root:hover {
+    background-color: transparent;
+  }
+}
+  .MuiButton-root:hover.Mui-disabled {
+    background-color: transparent;
+  }
+  .MuiButton-label {
+    width: 100%;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+  }
+  .MuiButton-text {
+    padding: 6px 8px;
+  }
+  .MuiButton-textPrimary {
+    color: #3f51b5;
+  }
+  .MuiButton-textPrimary:hover {
+    background-color: rgba(63, 81, 181, 0.04);
+  }
+@media (hover: none) {
+  .MuiButton-textPrimary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiButton-textSecondary {
+    color: #f50057;
+  }
+  .MuiButton-textSecondary:hover {
+    background-color: rgba(245, 0, 87, 0.04);
+  }
+@media (hover: none) {
+  .MuiButton-textSecondary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiButton-outlined {
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    padding: 5px 15px;
+  }
+  .MuiButton-outlined.Mui-disabled {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .MuiButton-outlinedPrimary {
+    color: #3f51b5;
+    border: 1px solid rgba(63, 81, 181, 0.5);
+  }
+  .MuiButton-outlinedPrimary:hover {
+    border: 1px solid #3f51b5;
+    background-color: rgba(63, 81, 181, 0.04);
+  }
+@media (hover: none) {
+  .MuiButton-outlinedPrimary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiButton-outlinedSecondary {
+    color: #f50057;
+    border: 1px solid rgba(245, 0, 87, 0.5);
+  }
+  .MuiButton-outlinedSecondary:hover {
+    border: 1px solid #f50057;
+    background-color: rgba(245, 0, 87, 0.04);
+  }
+  .MuiButton-outlinedSecondary.Mui-disabled {
+    border: 1px solid rgba(0, 0, 0, 0.26);
+  }
+@media (hover: none) {
+  .MuiButton-outlinedSecondary:hover {
+    background-color: transparent;
+  }
+}
+  .MuiButton-contained {
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+    background-color: #e0e0e0;
+  }
+  .MuiButton-contained:hover {
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+    background-color: #d5d5d5;
+  }
+  .MuiButton-contained.Mui-focusVisible {
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+  }
+  .MuiButton-contained:active {
+    box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+  }
+  .MuiButton-contained.Mui-disabled {
+    color: rgba(0, 0, 0, 0.26);
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+@media (hover: none) {
+  .MuiButton-contained:hover {
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+    background-color: #e0e0e0;
+  }
+}
+  .MuiButton-contained:hover.Mui-disabled {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+  .MuiButton-containedPrimary {
+    color: #fff;
+    background-color: #3f51b5;
+  }
+  .MuiButton-containedPrimary:hover {
+    background-color: #303f9f;
+  }
+@media (hover: none) {
+  .MuiButton-containedPrimary:hover {
+    background-color: #3f51b5;
+  }
+}
+  .MuiButton-containedSecondary {
+    color: #fff;
+    background-color: #f50057;
+  }
+  .MuiButton-containedSecondary:hover {
+    background-color: #c51162;
+  }
+@media (hover: none) {
+  .MuiButton-containedSecondary:hover {
+    background-color: #f50057;
+  }
+}
+  .MuiButton-disableElevation {
+    box-shadow: none;
+  }
+  .MuiButton-disableElevation:hover {
+    box-shadow: none;
+  }
+  .MuiButton-disableElevation.Mui-focusVisible {
+    box-shadow: none;
+  }
+  .MuiButton-disableElevation:active {
+    box-shadow: none;
+  }
+  .MuiButton-disableElevation.Mui-disabled {
+    box-shadow: none;
+  }
+  .MuiButton-colorInherit {
+    color: inherit;
+    border-color: currentColor;
+  }
+  .MuiButton-textSizeSmall {
+    padding: 4px 5px;
+    font-size: 0.8125rem;
+  }
+  .MuiButton-textSizeLarge {
+    padding: 8px 11px;
+    font-size: 0.9375rem;
+  }
+  .MuiButton-outlinedSizeSmall {
+    padding: 3px 9px;
+    font-size: 0.8125rem;
+  }
+  .MuiButton-outlinedSizeLarge {
+    padding: 7px 21px;
+    font-size: 0.9375rem;
+  }
+  .MuiButton-containedSizeSmall {
+    padding: 4px 10px;
+    font-size: 0.8125rem;
+  }
+  .MuiButton-containedSizeLarge {
+    padding: 8px 22px;
+    font-size: 0.9375rem;
+  }
+  .MuiButton-fullWidth {
+    width: 100%;
+  }
+  .MuiButton-startIcon {
+    display: inherit;
+    margin-left: -4px;
+    margin-right: 8px;
+  }
+  .MuiButton-startIcon.MuiButton-iconSizeSmall {
+    margin-left: -2px;
+  }
+  .MuiButton-endIcon {
+    display: inherit;
+    margin-left: 8px;
+    margin-right: -4px;
+  }
+  .MuiButton-endIcon.MuiButton-iconSizeSmall {
+    margin-right: -2px;
+  }
+  .MuiButton-iconSizeSmall > *:first-child {
+    font-size: 18px;
+  }
+  .MuiButton-iconSizeMedium > *:first-child {
+    font-size: 20px;
+  }
+  .MuiButton-iconSizeLarge > *:first-child {
+    font-size: 22px;
+  }
+  .MuiCard-root {
+    overflow: hidden;
+  }
+  .MuiCardContent-root {
+    padding: 16px;
+  }
+  .MuiCardContent-root:last-child {
+    padding-bottom: 24px;
+  }
+  .MuiContainer-root {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+@media (min-width:600px) {
+  .MuiContainer-root {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+  .MuiContainer-disableGutters {
+    padding-left: 0;
+    padding-right: 0;
+  }
+@media (min-width:600px) {
+  .MuiContainer-fixed {
+    max-width: 600px;
+  }
+}
+@media (min-width:960px) {
+  .MuiContainer-fixed {
+    max-width: 960px;
+  }
+}
+@media (min-width:1280px) {
+  .MuiContainer-fixed {
+    max-width: 1280px;
+  }
+}
+@media (min-width:1920px) {
+  .MuiContainer-fixed {
+    max-width: 1920px;
+  }
+}
+@media (min-width:0px) {
+  .MuiContainer-maxWidthXs {
+    max-width: 444px;
+  }
+}
+@media (min-width:600px) {
+  .MuiContainer-maxWidthSm {
+    max-width: 600px;
+  }
+}
+@media (min-width:960px) {
+  .MuiContainer-maxWidthMd {
+    max-width: 960px;
+  }
+}
+@media (min-width:1280px) {
+  .MuiContainer-maxWidthLg {
+    max-width: 1280px;
+  }
+}
+@media (min-width:1920px) {
+  .MuiContainer-maxWidthXl {
+    max-width: 1920px;
+  }
+}
+  .MuiDivider-root {
+    border: none;
+    height: 1px;
+    margin: 0;
+    flex-shrink: 0;
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+  .MuiDivider-absolute {
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+  }
+  .MuiDivider-inset {
+    margin-left: 72px;
+  }
+  .MuiDivider-light {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+  .MuiDivider-middle {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .MuiDivider-vertical {
+    width: 1px;
+    height: 100%;
+  }
+  .MuiDivider-flexItem {
+    height: auto;
+    align-self: stretch;
+  }
+@keyframes mui-auto-fill {}
+@keyframes mui-auto-fill-cancel {}
+  .MuiInputBase-root {
+    color: rgba(0, 0, 0, 0.87);
+    cursor: text;
+    display: inline-flex;
+    position: relative;
+    font-size: 1rem;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.1876em;
+    letter-spacing: 0.00938em;
+  }
+  .MuiInputBase-root.Mui-disabled {
+    color: rgba(0, 0, 0, 0.38);
+    cursor: default;
+  }
+  .MuiInputBase-multiline {
+    padding: 6px 0 7px;
+  }
+  .MuiInputBase-multiline.MuiInputBase-marginDense {
+    padding-top: 3px;
+  }
+  .MuiInputBase-fullWidth {
+    width: 100%;
+  }
+  .MuiInputBase-input {
+    font: inherit;
+    color: currentColor;
+    width: 100%;
+    border: 0;
+    height: 1.1876em;
+    margin: 0;
+    display: block;
+    padding: 6px 0 7px;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+    animation-name: mui-auto-fill-cancel;
+    letter-spacing: inherit;
+    animation-duration: 10ms;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .MuiInputBase-input::-webkit-input-placeholder {
+    color: currentColor;
+    opacity: 0.42;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+  .MuiInputBase-input::-moz-placeholder {
+    color: currentColor;
+    opacity: 0.42;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+  .MuiInputBase-input:-ms-input-placeholder {
+    color: currentColor;
+    opacity: 0.42;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+  .MuiInputBase-input::-ms-input-placeholder {
+    color: currentColor;
+    opacity: 0.42;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+  .MuiInputBase-input:focus {
+    outline: 0;
+  }
+  .MuiInputBase-input:invalid {
+    box-shadow: none;
+  }
+  .MuiInputBase-input::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  .MuiInputBase-input.Mui-disabled {
+    opacity: 1;
+  }
+  .MuiInputBase-input:-webkit-autofill {
+    animation-name: mui-auto-fill;
+    animation-duration: 5000s;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-webkit-input-placeholder {
+    opacity: 0 !important;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-moz-placeholder {
+    opacity: 0 !important;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:-ms-input-placeholder {
+    opacity: 0 !important;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-ms-input-placeholder {
+    opacity: 0 !important;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-webkit-input-placeholder {
+    opacity: 0.42;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-moz-placeholder {
+    opacity: 0.42;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus:-ms-input-placeholder {
+    opacity: 0.42;
+  }
+  label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-ms-input-placeholder {
+    opacity: 0.42;
+  }
+  .MuiInputBase-inputMarginDense {
+    padding-top: 3px;
+  }
+  .MuiInputBase-inputMultiline {
+    height: auto;
+    resize: none;
+    padding: 0;
+  }
+  .MuiInputBase-inputTypeSearch {
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+  }
+  .MuiFormControl-root {
+    border: 0;
+    margin: 0;
+    display: inline-flex;
+    padding: 0;
+    position: relative;
+    min-width: 0;
+    flex-direction: column;
+    vertical-align: top;
+  }
+  .MuiFormControl-marginNormal {
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  .MuiFormControl-marginDense {
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+  .MuiFormControl-fullWidth {
+    width: 100%;
+  }
+  .MuiFormLabel-root {
+    color: rgba(0, 0, 0, 0.54);
+    padding: 0;
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.00938em;
+  }
+  .MuiFormLabel-root.Mui-focused {
+    color: #3f51b5;
+  }
+  .MuiFormLabel-root.Mui-disabled {
+    color: rgba(0, 0, 0, 0.38);
+  }
+  .MuiFormLabel-root.Mui-error {
+    color: #f44336;
+  }
+  .MuiFormLabel-colorSecondary.Mui-focused {
+    color: #f50057;
+  }
+  .MuiFormLabel-asterisk.Mui-error {
+    color: #f44336;
+  }
+  .MuiGrid-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  .MuiGrid-item {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .MuiGrid-zeroMinWidth {
+    min-width: 0;
+  }
+  .MuiGrid-direction-xs-column {
+    flex-direction: column;
+  }
+  .MuiGrid-direction-xs-column-reverse {
+    flex-direction: column-reverse;
+  }
+  .MuiGrid-direction-xs-row-reverse {
+    flex-direction: row-reverse;
+  }
+  .MuiGrid-wrap-xs-nowrap {
+    flex-wrap: nowrap;
+  }
+  .MuiGrid-wrap-xs-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+  .MuiGrid-align-items-xs-center {
+    align-items: center;
+  }
+  .MuiGrid-align-items-xs-flex-start {
+    align-items: flex-start;
+  }
+  .MuiGrid-align-items-xs-flex-end {
+    align-items: flex-end;
+  }
+  .MuiGrid-align-items-xs-baseline {
+    align-items: baseline;
+  }
+  .MuiGrid-align-content-xs-center {
+    align-content: center;
+  }
+  .MuiGrid-align-content-xs-flex-start {
+    align-content: flex-start;
+  }
+  .MuiGrid-align-content-xs-flex-end {
+    align-content: flex-end;
+  }
+  .MuiGrid-align-content-xs-space-between {
+    align-content: space-between;
+  }
+  .MuiGrid-align-content-xs-space-around {
+    align-content: space-around;
+  }
+  .MuiGrid-justify-xs-center {
+    justify-content: center;
+  }
+  .MuiGrid-justify-xs-flex-end {
+    justify-content: flex-end;
+  }
+  .MuiGrid-justify-xs-space-between {
+    justify-content: space-between;
+  }
+  .MuiGrid-justify-xs-space-around {
+    justify-content: space-around;
+  }
+  .MuiGrid-justify-xs-space-evenly {
+    justify-content: space-evenly;
+  }
+  .MuiGrid-spacing-xs-1 {
+    width: calc(100% + 8px);
+    margin: -4px;
+  }
+  .MuiGrid-spacing-xs-1 > .MuiGrid-item {
+    padding: 4px;
+  }
+  .MuiGrid-spacing-xs-2 {
+    width: calc(100% + 16px);
+    margin: -8px;
+  }
+  .MuiGrid-spacing-xs-2 > .MuiGrid-item {
+    padding: 8px;
+  }
+  .MuiGrid-spacing-xs-3 {
+    width: calc(100% + 24px);
+    margin: -12px;
+  }
+  .MuiGrid-spacing-xs-3 > .MuiGrid-item {
+    padding: 12px;
+  }
+  .MuiGrid-spacing-xs-4 {
+    width: calc(100% + 32px);
+    margin: -16px;
+  }
+  .MuiGrid-spacing-xs-4 > .MuiGrid-item {
+    padding: 16px;
+  }
+  .MuiGrid-spacing-xs-5 {
+    width: calc(100% + 40px);
+    margin: -20px;
+  }
+  .MuiGrid-spacing-xs-5 > .MuiGrid-item {
+    padding: 20px;
+  }
+  .MuiGrid-spacing-xs-6 {
+    width: calc(100% + 48px);
+    margin: -24px;
+  }
+  .MuiGrid-spacing-xs-6 > .MuiGrid-item {
+    padding: 24px;
+  }
+  .MuiGrid-spacing-xs-7 {
+    width: calc(100% + 56px);
+    margin: -28px;
+  }
+  .MuiGrid-spacing-xs-7 > .MuiGrid-item {
+    padding: 28px;
+  }
+  .MuiGrid-spacing-xs-8 {
+    width: calc(100% + 64px);
+    margin: -32px;
+  }
+  .MuiGrid-spacing-xs-8 > .MuiGrid-item {
+    padding: 32px;
+  }
+  .MuiGrid-spacing-xs-9 {
+    width: calc(100% + 72px);
+    margin: -36px;
+  }
+  .MuiGrid-spacing-xs-9 > .MuiGrid-item {
+    padding: 36px;
+  }
+  .MuiGrid-spacing-xs-10 {
+    width: calc(100% + 80px);
+    margin: -40px;
+  }
+  .MuiGrid-spacing-xs-10 > .MuiGrid-item {
+    padding: 40px;
+  }
+  .MuiGrid-grid-xs-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-xs-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-xs-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-xs-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-xs-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-xs-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-xs-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-xs-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-xs-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-xs-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-xs-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-xs-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-xs-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-xs-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+@media (min-width:600px) {
+  .MuiGrid-grid-sm-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-sm-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-sm-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-sm-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-sm-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-sm-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-sm-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-sm-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-sm-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-sm-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-sm-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-sm-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-sm-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-sm-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:960px) {
+  .MuiGrid-grid-md-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-md-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-md-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-md-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-md-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-md-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-md-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-md-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-md-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-md-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-md-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-md-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-md-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-md-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1280px) {
+  .MuiGrid-grid-lg-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-lg-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-lg-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-lg-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-lg-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-lg-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-lg-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-lg-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-lg-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-lg-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-lg-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-lg-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-lg-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-lg-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media (min-width:1920px) {
+  .MuiGrid-grid-xl-auto {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+  }
+  .MuiGrid-grid-xl-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+  }
+  .MuiGrid-grid-xl-1 {
+    flex-grow: 0;
+    max-width: 8.333333%;
+    flex-basis: 8.333333%;
+  }
+  .MuiGrid-grid-xl-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+  }
+  .MuiGrid-grid-xl-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+  }
+  .MuiGrid-grid-xl-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+  }
+  .MuiGrid-grid-xl-5 {
+    flex-grow: 0;
+    max-width: 41.666667%;
+    flex-basis: 41.666667%;
+  }
+  .MuiGrid-grid-xl-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+  }
+  .MuiGrid-grid-xl-7 {
+    flex-grow: 0;
+    max-width: 58.333333%;
+    flex-basis: 58.333333%;
+  }
+  .MuiGrid-grid-xl-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+  }
+  .MuiGrid-grid-xl-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+  }
+  .MuiGrid-grid-xl-10 {
+    flex-grow: 0;
+    max-width: 83.333333%;
+    flex-basis: 83.333333%;
+  }
+  .MuiGrid-grid-xl-11 {
+    flex-grow: 0;
+    max-width: 91.666667%;
+    flex-basis: 91.666667%;
+  }
+  .MuiGrid-grid-xl-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+  .MuiInputLabel-root {
+    display: block;
+    transform-origin: top left;
+  }
+  .MuiInputLabel-formControl {
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translate(0, 24px) scale(1);
+  }
+  .MuiInputLabel-marginDense {
+    transform: translate(0, 21px) scale(1);
+  }
+  .MuiInputLabel-shrink {
+    transform: translate(0, 1.5px) scale(0.75);
+    transform-origin: top left;
+  }
+  .MuiInputLabel-animated {
+    transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  }
+  .MuiInputLabel-filled {
+    z-index: 1;
+    transform: translate(12px, 20px) scale(1);
+    pointer-events: none;
+  }
+  .MuiInputLabel-filled.MuiInputLabel-marginDense {
+    transform: translate(12px, 17px) scale(1);
+  }
+  .MuiInputLabel-filled.MuiInputLabel-shrink {
+    transform: translate(12px, 10px) scale(0.75);
+  }
+  .MuiInputLabel-filled.MuiInputLabel-shrink.MuiInputLabel-marginDense {
+    transform: translate(12px, 7px) scale(0.75);
+  }
+  .MuiInputLabel-outlined {
+    z-index: 1;
+    transform: translate(14px, 20px) scale(1);
+    pointer-events: none;
+  }
+  .MuiInputLabel-outlined.MuiInputLabel-marginDense {
+    transform: translate(14px, 12px) scale(1);
+  }
+  .MuiInputLabel-outlined.MuiInputLabel-shrink {
+    transform: translate(14px, -6px) scale(0.75);
+  }
+  .MuiLink-underlineNone {
+    text-decoration: none;
+  }
+  .MuiLink-underlineHover {
+    text-decoration: none;
+  }
+  .MuiLink-underlineHover:hover {
+    text-decoration: underline;
+  }
+  .MuiLink-underlineAlways {
+    text-decoration: underline;
+  }
+  .MuiLink-button {
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    position: relative;
+    user-select: none;
+    border-radius: 0;
+    vertical-align: middle;
+    -moz-appearance: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .MuiLink-button::-moz-focus-inner {
+    border-style: none;
+  }
+  .MuiLink-button.Mui-focusVisible {
+    outline: auto;
+  }
+  .jss41 {
+    top: -5px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0 8px;
+    overflow: hidden;
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  .jss42 {
+    padding: 0;
+    text-align: left;
+    transition: width 150ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+    line-height: 11px;
+  }
+  .jss43 {
+    width: auto;
+    height: 11px;
+    display: block;
+    padding: 0;
+    font-size: 0.75em;
+    max-width: 0.01px;
+    text-align: left;
+    transition: max-width 50ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+    visibility: hidden;
+  }
+  .jss43 > span {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .jss44 {
+    max-width: 1000px;
+    transition: max-width 100ms cubic-bezier(0.0, 0, 0.2, 1) 50ms;
+  }
+  .MuiOutlinedInput-root {
+    position: relative;
+    border-radius: 4px;
+  }
+  .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.87);
+  }
+@media (hover: none) {
+  .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.23);
+  }
+}
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #3f51b5;
+    border-width: 2px;
+  }
+  .MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline {
+    border-color: #f44336;
+  }
+  .MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.26);
+  }
+  .MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #f50057;
+  }
+  .MuiOutlinedInput-adornedStart {
+    padding-left: 14px;
+  }
+  .MuiOutlinedInput-adornedEnd {
+    padding-right: 14px;
+  }
+  .MuiOutlinedInput-multiline {
+    padding: 18.5px 14px;
+  }
+  .MuiOutlinedInput-multiline.MuiOutlinedInput-marginDense {
+    padding-top: 10.5px;
+    padding-bottom: 10.5px;
+  }
+  .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.23);
+  }
+  .MuiOutlinedInput-input {
+    padding: 18.5px 14px;
+  }
+  .MuiOutlinedInput-input:-webkit-autofill {
+    border-radius: inherit;
+  }
+  .MuiOutlinedInput-inputMarginDense {
+    padding-top: 10.5px;
+    padding-bottom: 10.5px;
+  }
+  .MuiOutlinedInput-inputMultiline {
+    padding: 0;
+  }
+  .MuiOutlinedInput-inputAdornedStart {
+    padding-left: 0;
+  }
+  .MuiOutlinedInput-inputAdornedEnd {
+    padding-right: 0;
+  }
+
+  .jss11 {
+    width: 98vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .jss13 {
+    color: #f50057;
+  }
+@media (max-width:599.95px) {
+  .jss13 {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+  .jss14 {
+    color: #ddf;
+  }
+@media (max-width:599.95px) {
+  .jss14 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+  .jss17 {
+    width: 394px;
+    margin-bottom: 1rem;
+  }
+@media (max-width:599.95px) {
+  .jss17 {
+    width: 100%;
+  }
+}
+  .jss18 {
+    padding: 10rem 0;
+  }
+  .jss20 {
+    color: #7986cb;
+    font-size: 1.4rem;
+  }
+  .jss21 {
+    height: 300px;
+  }
+  .jss22 {
+    border-radius: 20px;
+  }
+  .jss23 {
+    height: 200px;
+  }
+@media (max-width:599.95px) {
+  .jss23 {
+    height: 240px;
+  }
+}
+  .jss24 {
+    color: #ccc;
+    padding: .5rem 0;
+  }
+  .jss25 {
+    margin-left: -13px;
+  }
+  .jss26 {
+    color: #f50057;
+  }
+  .jss27 {
+    padding: 10rem 0;
+  }
+  .jss28 {
+    margin-bottom: .3rem;
+  }
+  .jss29 {
+    padding: .5rem 0;
+  }
+  .jss30 {
+    display: flex;
+    padding: 2rem 0 7rem;
+    align-items: center;
+    margin-bottom: 5rem;
+    justify-content: center;
+  }
+  .jss31 {
+    height: 350px;
+    display: flex;
+    max-width: 500px;
+    margin-top: 64px;
+    align-items: center;
+    flex-direction: column;
+  }
+@media (max-width:599.95px) {
+  .jss31 {
+    width: 100%;
+    height: 400px;
+  }
+}
+  .jss32 {
+    color: #f1f1f1;
+    width: 500px;
+    height: 350px;
+    display: flex;
+    background: #303f9f;
+    margin-top: 64px;
+    flex-direction: column;
+  }
+@media (max-width:599.95px) {
+  .jss32 {
+    width: 100%;
+  }
+}
+  .jss33 {
+    margin: 8px;
+    background-color: #f50057;
+  }
+  .jss34 {
+    width: 100%;
+    margin-top: 24px;
+  }
+  .jss35 {
+    margin: 24px 0px 16px;
+  }
+  .jss36 {
+    color: white;
+    padding: 10rem 0 0 0;
+  }
+  .jss37 {
+    font-weight: 300;
+    padding-bottom: 1rem;
+  }
+  .jss38 {
+    color: #ff4081;
+  }
+  .jss39 {
+    font-size: 3rem;
+  }
+  .jss46 {
+    padding: 1.3rem;
+    background: #f50057;
+  }
+  .jss47 {
+    color: #fff;
+  }
+  .jss49 {
+    color: #fff;
+  }
+  .jss3 {
+    top: 0;
+    color: #fff;
+    right: 0;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    z-index: 30;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+  }
+  .jss4 {
+    cursor: pointer;
+    padding: 3px 5px;
+  }
+  .jss4.current {
+    background: linear-gradient(0deg, #FF2727 0%, rgba(235, 81, 81, 0) 100%);
+  }
+  .jss4:hover {
+    transform: scale(1.06);
+  }
+  .jss1 {
+    height: 300vh;
+    z-index: -3000000;
+    background: #00000600;
+  }</style></head><body><div id="__next"><div class="MuiBox-root jss2 jss1"><div style="position:fixed;width:100%;height:100%;overflow:hidden;z-index:-20;top:0;background-color:#000006;transition:all 3s ease-out"><canvas style="display:block"></canvas></div><nav class="MuiBox-root jss5 jss3"><div class="MuiContainer-root MuiContainer-maxWidthLg"><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 MuiGrid-align-items-xs-center MuiGrid-justify-xs-flex-end"><div class="MuiGrid-root MuiGrid-item"><div class="MuiBox-root jss6 jss4">Home</div></div><div class="MuiGrid-root MuiGrid-item"><div class="MuiBox-root jss7 jss4">Services</div></div><div class="MuiGrid-root MuiGrid-item"><div class="MuiBox-root jss8 jss4">Contact</div></div><div class="MuiGrid-root MuiGrid-item"><div class="MuiBox-root jss9 jss4 current">Portfolio</div></div><div class="MuiGrid-root MuiGrid-item"><div class="MuiBox-root jss10 jss4">Blog</div></div></div></div></nav><header class="MuiBox-root jss15 jss11"><div class="MuiBox-root jss16 jss12"><div style="opacity:0;transform:translateX(-30px) translateZ(0)"><h1 class="MuiTypography-root jss13 MuiTypography-h1">Benjamin Scott</h1></div><div style="opacity:0;transform:translateY(-50px) translateZ(0)"><p class="MuiTypography-root jss14 MuiTypography-h2">React Web Developer</p></div></div></header><div class="MuiContainer-root MuiContainer-maxWidthLg" id="projects"><div><h2 class="MuiTypography-root jss18 white txt-center MuiTypography-h2">Projects</h2></div><div><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"></div></div></div><div class="MuiContainer-root MuiContainer-maxWidthSm" id="about"><div><h2 class="MuiTypography-root jss27 white txt-center MuiTypography-h2">About</h2></div><div><div><h4 class="MuiTypography-root white MuiTypography-h4">Introduction</h4></div><div><hr class="MuiDivider-root jss28" style="background:white"/></div><div><p class="MuiTypography-root jss29 white MuiTypography-body1">As a passionate developer, my goals are to keep progressing in all areas of web development. From front-end to back, my skills will keep moving forward by building and learning everything that I can. It&#x27;s really just how I am strangely enough.</p></div><div><p class="MuiTypography-root jss29 white MuiTypography-body1">The one thing that has always pushed me forward in life is the ability to learn. Ever since highschool, I&#x27;ve always taken another step in the pursuit of knowledge, whether it be for something new, something that I was generally interested in, or something that I saw was useful.</p></div><div><p class="MuiTypography-root jss29 white MuiTypography-body1">When it comes to the tech, I am currently placing my time into React.js. I like to integrate Material UI, building anything with an implication towards scalable apps and websites.</p></div><div><p class="MuiTypography-root jss29 white MuiTypography-body1">I am currently being mentored by a lead front-end developer for the last 3 months, partaking in building my skills in all the intricacies that web development and programming comes with. Learning efficient coding techniques whether it be making things more readable or better performance problem solving code.</p></div><div><h4 class="MuiTypography-root white MuiTypography-h4">Experience</h4></div><div><hr class="MuiDivider-root jss28" style="background:white"/></div><div><p class="MuiTypography-root jss29 white MuiTypography-body1">I have collaborated on projects with friends and have been persistently building all sorts of projects, whether it be websites, games or applications. I am constantly working on my skills every single day, treating this as a full time job.</p></div><div><p class="MuiTypography-root jss29 white MuiTypography-body1">I am currently building a fullstack application for a company on their goals of organizing data and the representation of it. Also they&#x27;re paying me so it&#x27;s actually really cool!</p></div><div><p class="MuiTypography-root jss29 white MuiTypography-body1">One of my other projects is an actual application for my mentor and his website while working with other mentees.</p></div><div><h4 class="MuiTypography-root white MuiTypography-h4">Education</h4></div><div><p class="MuiTypography-root jss29 white MuiTypography-body1">I am I self studied Web Developer so I never obtain my knowledge from one source. I have used Free Code Camp, YouTube videos from people like Dev Ed, Brad Traversy, The Net Ninja, Free Code Camp, Tony Alicia, Chris Sean, Programming with Mosh and others that have created web development content. I have also learned from Udemy courses and from the Head First series. LOTS of my learning comes from the actual experience (and Google). And some of it comes from working with other developers.</p></div></div></div><div class="MuiContainer-root jss30 MuiContainer-maxWidthLg" id="contact"><div class="MuiBox-root jss40"><div><h2 class="MuiTypography-root jss36 MuiTypography-h2 MuiTypography-alignCenter">Contact</h2></div><div><div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"><div class="MuiGrid-root MuiGrid-item"><div class="MuiPaper-root MuiCard-root jss31 MuiPaper-elevation1 MuiPaper-rounded"><div class="MuiCardContent-root"><form class="jss34" name="contact" method="POST" action="/success" data-netflify="true"><input type="hidden" name="form-name" value="contact"/><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"><div class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"><label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required" data-shrink="false" for="yourfirstName" id="yourfirstName-label">First Name<span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk"> <!-- -->*</span></label><div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"><input type="text" aria-invalid="false" autoComplete="fname" autofocus="" id="yourfirstName" name="firstName" required="" class="MuiInputBase-input MuiOutlinedInput-input"/><fieldset aria-hidden="true" class="jss41 MuiOutlinedInput-notchedOutline"><legend class="jss43"><span>First Name<!-- --> *</span></legend></fieldset></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"><div class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"><label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required" data-shrink="false" for="lastName" id="lastName-label">Last Name<span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk"> <!-- -->*</span></label><div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"><input type="text" aria-invalid="false" autoComplete="lname" id="lastName" name="yourlastName" required="" class="MuiInputBase-input MuiOutlinedInput-input"/><fieldset aria-hidden="true" class="jss41 MuiOutlinedInput-notchedOutline"><legend class="jss43"><span>Last Name<!-- --> *</span></legend></fieldset></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"><label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required" data-shrink="false" for="youremail" id="youremail-label">Email Address<span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk"> <!-- -->*</span></label><div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"><input type="text" aria-invalid="false" autoComplete="email" id="youremail" name="email" required="" class="MuiInputBase-input MuiOutlinedInput-input"/><fieldset aria-hidden="true" class="jss41 MuiOutlinedInput-notchedOutline"><legend class="jss43"><span>Email Address<!-- --> *</span></legend></fieldset></div></div></div><div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"><div class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"><label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined Mui-required Mui-required" data-shrink="false" for="yourmessage" id="yourmessage-label">Send A Message<span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk"> <!-- -->*</span></label><div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"><textarea rows="1" aria-invalid="false" id="yourmessage" name="message" required="" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"></textarea><textarea aria-hidden="true" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline" readonly="" tabindex="-1" style="visibility:hidden;position:absolute;overflow:hidden;height:0;top:0;left:0;transform:translateZ(0)"></textarea><fieldset aria-hidden="true" class="jss41 MuiOutlinedInput-notchedOutline"><legend class="jss43"><span>Send A Message<!-- --> *</span></legend></fieldset></div></div></div></div><button class="MuiButtonBase-root MuiButton-root MuiButton-contained jss35 MuiButton-containedPrimary MuiButton-fullWidth" tabindex="0" type="submit"><span class="MuiButton-label">Send Message</span></button></form></div></div></div><div class="MuiGrid-root MuiGrid-item"><div class="MuiPaper-root MuiCard-root jss32 MuiPaper-elevation1 MuiPaper-rounded"><div class="MuiCardContent-root"><h3 class="MuiTypography-root jss37 MuiTypography-h4 MuiTypography-alignCenter">Other Ways of Contact</h3><hr class="MuiDivider-root" style="background:#f1f1f1"/><div><div class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-center" style="padding:5rem 0 3rem"><div><div class="MuiGrid-root MuiGrid-item"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary" href="https://github.com/benzend"><button class="MuiButtonBase-root MuiIconButton-root jss38" tabindex="0" type="button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root jss39" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path></svg></span></button></a></div></div><div><div class="MuiGrid-root MuiGrid-item"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary" href="https://twitter.com/@TheBenzend"><button class="MuiButtonBase-root MuiIconButton-root jss38" tabindex="0" type="button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root jss39" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"></path></svg></span></button></a></div></div><div><div class="MuiGrid-root MuiGrid-item"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary" href="https://www.linkedin.com/in/benjamin-scott-62a3741b1/"><button class="MuiButtonBase-root MuiIconButton-root jss38" tabindex="0" type="button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root jss39" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg></span></button></a></div></div><div><div class="MuiGrid-root MuiGrid-item"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary" href="mailto: benjamin.scottt.dev@gmail.com"><button class="MuiButtonBase-root MuiIconButton-root jss38" tabindex="0" type="button"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root jss39" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg></span></button></a></div></div></div></div></div></div></div></div></div></div></div><footer class="MuiBox-root jss45"><div class="MuiBox-root jss50 jss46"><div class="MuiContainer-root MuiContainer-maxWidthMd"><div class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-space-between"><div class="MuiGrid-root MuiGrid-item"><div class="MuiGrid-root jss48 MuiGrid-container MuiGrid-spacing-xs-3"><div class="MuiGrid-root jss49 MuiGrid-item"><a href="/">Home</a></div><div class="MuiGrid-root jss49 MuiGrid-item"><a href="/services">Services</a></div><div class="MuiGrid-root jss49 MuiGrid-item"><a href="/portfolio">Portfolio</a></div><div class="MuiGrid-root jss49 MuiGrid-item"><a href="/blog">Blog</a></div></div></div><div class="MuiGrid-root MuiGrid-item"><div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"><div class="MuiGrid-root MuiGrid-item"><p class="MuiTypography-root MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary" rel="noreferrer" href="https://twitter.com/TheBenzend" target="_blank"><svg class="MuiSvgIcon-root jss47" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"></path></svg></a></p></div><div class="MuiGrid-root MuiGrid-item"><p class="MuiTypography-root MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary" rel="noreferrer" href="https://github.com/benzend" target="_blank"><svg class="MuiSvgIcon-root jss47" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path></svg></a></p></div><div class="MuiGrid-root MuiGrid-item"><p class="MuiTypography-root MuiTypography-body1"><a class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary" rel="noreferrer" href="https://www.linkedin.com/in/benjamin-scott-62a3741b1/" target="_blank"><svg class="MuiSvgIcon-root jss47" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg></a></p></div></div></div></div></div></div></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/portfolio","query":{},"buildId":"lbWyWgFW1fqFFWtMmFmH0","runtimeConfig":{},"nextExport":true,"autoExport":true,"isFallback":false}</script><script nomodule="" src="/_next/static/chunks/polyfills-df541f88df35afcfaabe.js"></script><script src="/_next/static/chunks/main-fe7caf2377a24d24b236.js" async=""></script><script src="/_next/static/chunks/webpack-95c2b224bccf352ee870.js" async=""></script><script src="/_next/static/chunks/framework.2890804e4782b2c2976a.js" async=""></script><script src="/_next/static/chunks/commons.0ad5f420dff3a0811547.js" async=""></script><script src="/_next/static/chunks/8cbc616a7cc465f9b2a62f6d359c031bb9f62fa5.c225e23eed447fd71017.js" async=""></script><script src="/_next/static/chunks/pages/_app-a725197ec6a3df3daa9b.js" async=""></script><script src="/_next/static/chunks/05d954cf.6f29b41b19f6804a37fe.js" async=""></script><script src="/_next/static/chunks/fb7d5399.ec305a25efee862546b2.js" async=""></script><script src="/_next/static/chunks/298afb993e8afff67d45b4773e6533315ecb07c4.81454f4206675c9e0b20.js" async=""></script><script src="/_next/static/chunks/f6d61d50ed421e5ab11c4586545936a9e1be2e13.bcdcce67c70907cccf9e.js" async=""></script><script src="/_next/static/chunks/pages/portfolio-2ad9459fc391009ce72c.js" async=""></script><script src="/_next/static/lbWyWgFW1fqFFWtMmFmH0/_buildManifest.js" async=""></script><script src="/_next/static/lbWyWgFW1fqFFWtMmFmH0/_ssgManifest.js" async=""></script></body></html>
